@@ -24,8 +24,21 @@ const DetailSurah = ({ surahNumber }) => {
       {surahData ? (
         <div>
           <h2>Surah {surahData.nama}</h2>
-          <p>{surahData.asma}</p>
-          <p>{surahData.keterangan}</p>
+          <p>Arti: {surahData.arti}</p>
+          <p>Jumlah Ayat: {surahData.jumlahAyat}</p>
+          <p>Tempat Turun: {surahData.tempatTurun}</p>
+          <p>Deskripsi: {surahData.deskripsi}</p>
+
+          <h3>Ayat:</h3>
+          <ul>
+            {surahData.ayat.map(ayat => (
+              <li key={ayat.nomorAyat}>
+                <p>{ayat.teksArab}</p>
+                <p>{ayat.teksLatin}</p>
+                <p>{ayat.teksIndonesia}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       ) : (
         <p>Loading...</p>
