@@ -24,12 +24,12 @@ const DetailSurah = ({ surahNumber }) => {
       {surahData ? (
         <div>
           <h2>Surah {surahData.nama}</h2>
-          <p>Arti: {surahData.arti}</p>
-          <p>Jumlah Ayat: {surahData.jumlahAyat}</p>
-          <p>Tempat Turun: {surahData.tempatTurun}</p>
-          <p>Deskripsi: {surahData.deskripsi}</p>
+          <p><b>Arti:</b> {surahData.arti}</p>
+          <p><b>Jumlah Ayat:</b> {surahData.jumlahAyat}</p>
+          <p><b>Tempat Turun:</b>{surahData.tempatTurun}</p>
+          <p><b>Deskripsi:</b>{surahData.deskripsi}</p>
 
-          <h3>Ayat:</h3>
+          <p><b>Ayat:</b></p>
           <ul>
             {surahData.ayat.map(ayat => (
               <li key={ayat.nomorAyat}>
